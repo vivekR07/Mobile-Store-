@@ -22,4 +22,4 @@ Run Spring Boot app using Maven:
       java -jar target/mywebserviceapp-0.0.1-SNAPSHOT.jar
       
       
-Adding the few line 
+Adding the few line as a developer
