@@ -4,7 +4,7 @@ pipeline{
         stage ('building the project'){
             steps{
                 echo 'Building the mobilestore application'
-                sh "mvn clean install"
+                sh 'mvn clean install'
             }
             
 
