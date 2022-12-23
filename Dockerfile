@@ -1,6 +1,1 @@
-FROM Baseimage
-COPY 
-ADD
-CMD
-FROM
-ENTERYPOINT
+
