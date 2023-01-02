@@ -25,10 +25,10 @@ public class MobileController {
 	@Autowired
 	private MobileService service;
 
-	//@GetMapping("/mobiles")
-	//@Operation(summary = "To get all details")
-	//public ResponseEntity<?> get() {
-	//	ResponseEntity<?> response;
+	@GetMapping("/mobiles")
+	@Operation(summary = "To get all details")
+	public ResponseEntity<?> get() {
+		ResponseEntity<?> response;
 		try {
 			response = new ResponseEntity<>(service.getAllMobiles(), HttpStatus.OK);
 		} catch (MobilePhonesNotFoundException e) {
