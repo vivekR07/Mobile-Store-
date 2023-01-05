@@ -13,6 +13,17 @@ pipeline{
             sh 'docker build -t mobilestore .'
         }
         }
+        stage('Sonarqube'){
+      steps{
+        echo "Sonarqube codequality"
+        sh '''
+	     	mvn clean verify sonar:sonar \
+                -Dsonar.projectKey=Mobilestore \
+                -Dsonar.host.url=http://40.122.113.201:9000 \
+                -Dsonar.login=sqp_6a5faccb812c93f281cc14bbcf82cf9b27000170
+		    '''  
+      }
+    } 
         stage('Deploy to dev'){
             steps{
                 echo "Deploying to dev environment"
