@@ -17,7 +17,7 @@ pipeline{
             steps{
                 echo "Deploying to dev environment"
                 sh 'docker rm -f mobile || true'
-                sh 'docker run -d --name=mobile -p 8097:8099 mobilestore:$BUILD_NUMBER'
+                sh 'docker run -d --name=mobile -p 9001:8099 mobilestore'
             }
         }
 
