@@ -1,10 +1,10 @@
 pipeline{
     agent any
     stages{
-        stage ('checkout code'){
+        stage ('building the project'){
             steps{
-                echo 'code checkout'
-                //sh 'mvn clean install'
+                echo 'Building the mobilestore application'
+                sh 'mvn clean install'
             }
         }
 
